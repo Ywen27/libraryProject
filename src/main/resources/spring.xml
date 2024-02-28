@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--Spring reprend le contenu MyBatis-->
+    <!--Pool de connexions DataSource Druid-->
+    <context:property-placeholder location="classpath:db.properties"/>
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <!--Configuration de base-->
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+    <!--SqlSessionFactory nécessite la prise en charge de DataSource-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--Injecter dans le pool de connexions-->
+        <property name="dataSource" ref="dataSource"/>
+        <!--Activer le nom de classe à utiliser comme alias dans la classe d'entité-->
+        <property name="typeAliasesPackage" value="com.yx.po"></property>
+
+        <!--Pagination-->
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageInterceptor">
+                    <property name="properties">
+                        <props>
+                            <!--Le numéro de page se situe dans une valeur raisonnable 0 - max-->
+                            <prop key="reasonable">true</prop>
+                        </props>
+                    </property>
+                </bean>
+            </array>
+        </property>
+    </bean>
+
+    <!--Dao nécessite la prise en charge de MapperScannerConfigurer-->
+    <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.yx.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
+    <!--Informez l'emplacement de l'annotation Spring pour garantir la validité de l'annotation. L'analyse d'annotation
+     suivante signifie que le contrôleur n'analyse pas, mais analyse le service et le dao-->
+    <context:component-scan base-package="com.yx">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"></context:exclude-filter>
+    </context:component-scan>
+    <!--Présentation d'un gestionnaire de transactions-->
+    <bean id="tx" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--@Transactional indique à Spring que la transaction personnalisée est basée sur DataSourceTransactionManager-->
+    <tx:annotation-driven transaction-manager="tx"></tx:annotation-driven>
+
+</beans>
