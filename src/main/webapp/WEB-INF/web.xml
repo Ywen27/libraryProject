@@ -51,9 +51,6 @@
         <url-pattern>/api/**</url-pattern>
         <url-pattern>/css/**</url-pattern>
         <url-pattern>/images/**</url-pattern>
-        <url-pattern>/js/*</url-pattern>
-        <url-pattern>/lib/*</url-pattern>
-        <url-pattern>/page/*</url-pattern>
     </servlet-mapping>
 
     <!--Configurer le chemin du fichier Spring-->
