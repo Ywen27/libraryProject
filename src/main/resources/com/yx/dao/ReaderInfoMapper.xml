@@ -189,4 +189,29 @@
       readerNumber = #{readernumber,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="queryAllReaderInfo" resultType="com.yx.po.ReaderInfo" parameterType="com.yx.po.ReaderInfo">
+    select * from reader_info
+    <where>
+      <!--reader Number-->
+      <if test="readerNumber!=null">
+        and readerNumber like '%${readerNumber}%'
+      </if>
+      <!--Username-->
+      <if test="username!=null">
+        and username like '%${username}%'
+      </if>
+      <if test="realName!=null">
+        and realName like '%${realName}%'
+      </if>
+      <!--telephone-->
+      <if test="tel!=null">
+        and tel like '%${tel}%'
+      </if>
+    </where>
+
+  </select>
+  <select id="queryUserInfoByNameAndPassword" resultType="com.yx.po.ReaderInfo">
+    select * from reader_info where username=#{username} and password=#{password}
+  </select>
 </mapper>
