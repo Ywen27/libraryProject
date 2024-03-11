@@ -155,15 +155,15 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
 
-  <!--高级查询映射文件-->
+  <!--Fichier de mappage de requête avancé-->
   <resultMap id="queryLendListAllMap" type="com.yx.po.LendList" extends="BaseResultMap">
-    <!--图书信息,需要得到图书名-->
+    <!--Informations sur le livre, on devrait obtenir le nom du livre-->
     <association property="bookInfo" javaType="com.yx.po.BookInfo">
       <id property="id" column="id"></id>
       <result property="name" column="bookName"></result>
     </association>
 
-    <!--读者信息，需要得到读者卡号和真实姓名-->
+    <!--Informations sur le lecteur, on devrait obtenir le numéro de lecteur et son vrai nom-->
     <association property="readerInfo" javaType="com.yx.po.ReaderInfo">
       <id property="id" column="id"></id>
       <result property="realName" column="realName"></result>
