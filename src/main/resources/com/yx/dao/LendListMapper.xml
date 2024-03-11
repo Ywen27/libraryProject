@@ -154,4 +154,96 @@
       exceptRemarks = #{exceptremarks,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <!--高级查询映射文件-->
+  <resultMap id="queryLendListAllMap" type="com.yx.po.LendList" extends="BaseResultMap">
+    <!--图书信息,需要得到图书名-->
+    <association property="bookInfo" javaType="com.yx.po.BookInfo">
+      <id property="id" column="id"></id>
+      <result property="name" column="bookName"></result>
+    </association>
+
+    <!--读者信息，需要得到读者卡号和真实姓名-->
+    <association property="readerInfo" javaType="com.yx.po.ReaderInfo">
+      <id property="id" column="id"></id>
+      <result property="realName" column="realName"></result>
+      <result property="readerNumber" column="readerNumber"></result>
+    </association>
+  </resultMap>
+
+  <!--rechercher tous les prêts-->
+  <select id="queryLendListAll" parameterType="com.yx.po.LendList" resultMap="queryLendListAllMap">
+    SELECT lend.*,
+    book.name as bookName,
+    reader.realName as realName,
+    reader.readerNumber
+    from lend_list lend LEFT JOIN book_info book  on book.id=lend.bookId
+    LEFT JOIN reader_info reader on reader.id=lend.readerId
+    <!--Requête avancée avec conditions-->
+    <where>
+      <if test="bookInfo!=null">
+        <!--Requête basée sur le titre du livre-->
+        <if test="bookInfo.name!=null and bookInfo.name!=''">
+          and book.name like '%${bookInfo.name}%'
+        </if>
+        <!--Vous devez également déterminer si l'heure de retour est vide
+         Si le livre a été emprunté n'a pas été rendu, le statut est 1, alors l'heure de retour = null
+         Si le livre a été rendu et que le statut est 0, l'heure de retour n'est pas vide, qui est l'heure de retour du livre.
+         -->
+        <if test="bookInfo.status!=null and bookInfo.status==1">
+          and book.status=1 and backDate is null
+        </if>
+        <if test="bookInfo.status!=null and bookInfo.status==0">
+          and book.status=0 and backDate is not null
+        </if>
+      </if>
+      <!--Requête basée sur readerNumber-->
+      <if test="readerInfo!=null">
+        <if test="readerInfo.readerNumber!=null and readerInfo.readerNumber!=''">
+          and readerNumber like '%${readerInfo.readerNumber}%'
+        </if>
+      </if>
+      <!--Rechercher par type de retour-->
+      <if test="backType!=null">
+        and backType=#{backType}
+      </if>
+    </where>
+    order by lend.lendDate desc
+  </select>
+
+  <!--Return-->
+  <update id="updateLendListSubmit" parameterType="com.yx.po.LendList">
+    update lend_list
+    <set>
+      backDate=#{backDate},
+      <if test="backType!=null">
+        backType=#{backType},
+      </if>
+      <if test="exceptRemarks!=null and exceptRemarks!=''">
+        exceptRemarks=#{exceptRemarks}
+      </if>
+    </set>
+    where id=#{id}
+  </update>
+
+  <!--Chronologie-->
+  <select id="queryLookBookList" resultMap="queryLendListAllMap">
+    SELECT
+    lend.*,
+    reader.readerNumber,
+    bookInfo.name  AS  bookName,
+    reader.realName AS realName
+    FROM
+    lend_list lend
+    LEFT JOIN reader_info reader ON reader.id = lend.readerId
+    LEFT JOIN book_info bookInfo ON bookInfo.id = lend.bookId
+    <where>
+
+      <if test="bid!=null">and bookInfo.id=#{bid} </if>
+
+      <if test="rid!=null">and reader.id=#{rid} </if>
+
+    </where>
+    order by lend.id desc
+  </select>
 </mapper>
