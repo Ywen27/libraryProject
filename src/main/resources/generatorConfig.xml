@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
-
-    <classPathEntry location="D:\Maven\apache-maven-3.6.0\mvn\repository\mysql\mysql-connector-java\5.1.6\mysql-connector-java-5.1.6.jar" />
     <context id="msqlTables" targetRuntime="MyBatis3">
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
         <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/library?useUnicode=true&amp;characterEncoding=utf-8"
-                        driverClass="com.mysql.jdbc.Driver" password="root" userId="root" >
+                        driverClass="com.mysql.cj.jdbc.Driver" password="123456" userId="root" >
 
             <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
@@ -14,16 +12,16 @@
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
         <!-- Générer une correspondance biunivoque entre les classes d'entités et les tables de base de données -->
-        <javaModelGenerator targetPackage="com.yx.po" targetProject="D:\IDEAProject\libraryProject\src\main\java">
+        <javaModelGenerator targetPackage="com.yx.po" targetProject="libraryProject\src\main\java">
             <property name="enableSubPackages" value="true"/>
             <!-- Les espaces avant et après les valeurs renvoyées par la base de données sont nettoyés -->
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
         <!--Mappage des fichiers XML et des interfaces dao-->
-        <sqlMapGenerator targetPackage="com.yx.dao" targetProject="D:\IDEAProject\libraryProject\src\main\resources">
+        <sqlMapGenerator targetPackage="com.yx.dao" targetProject="libraryProject\src\main\resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.yx.dao" targetProject="D:\IDEAProject\libraryProject\src\main\java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.yx.dao" targetProject="libraryProject\src\main\java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
