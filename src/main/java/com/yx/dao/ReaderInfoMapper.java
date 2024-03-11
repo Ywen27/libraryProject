@@ -1,6 +1,9 @@
 package com.yx.dao;
 
 import com.yx.po.ReaderInfo;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface ReaderInfoMapper {
     /**
@@ -50,4 +53,14 @@ public interface ReaderInfoMapper {
      * @mbggenerated Sun Mar 10 22:17:10 EDT 2024
      */
     int updateByPrimaryKey(ReaderInfo record);
+
+    /**
+     * Rechercher toutes les informations enregistrés.
+     */
+    List<ReaderInfo> queryAllReaderInfo(ReaderInfo readerInfo);
+
+    /**
+     *  Rechercher les utilisateurs en fonction d'username et du mot de passe
+     */
+    ReaderInfo queryUserInfoByNameAndPassword(@Param("username") String username, @Param("password") String password);
 }

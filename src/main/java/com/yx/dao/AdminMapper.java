@@ -1,6 +1,9 @@
 package com.yx.dao;
 
 import com.yx.po.Admin;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface AdminMapper {
     /**
@@ -50,4 +53,14 @@ public interface AdminMapper {
      * @mbggenerated Sun Mar 10 22:17:10 EDT 2024
      */
     int updateByPrimaryKey(Admin record);
+
+    /**
+     * Requête de l'administrateur
+     */
+    List<Admin> queryAdminInfoAll(Admin admin);
+
+    /**
+     * Rechercher les utilisateurs en fonction d'username et du mot de passe
+     */
+    Admin queryUserByNameAndPassword(@Param("username") String username, @Param("password") String password);
 }

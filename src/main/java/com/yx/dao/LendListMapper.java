@@ -1,6 +1,9 @@
 package com.yx.dao;
 
 import com.yx.po.LendList;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface LendListMapper {
     /**
@@ -50,4 +53,20 @@ public interface LendListMapper {
      * @mbggenerated Sun Mar 10 22:17:10 EDT 2024
      */
     int updateByPrimaryKey(LendList record);
+
+    /**
+     * Rechercher tous les enregistrements d'emprunt.
+     */
+    List<LendList> queryLendListAll(LendList lendList);
+
+
+    /**
+     * Vérifiez la chronologie d'emprunt (quand un livre a été emprunté)
+     */
+    List<LendList> queryLookBookList(@Param("rid") Integer rid, @Param("bid") Integer bid);
+
+    /**
+     * Opération de retour de livre (retour normal)
+     */
+    void updateLendListSubmit(LendList lendList);
 }
