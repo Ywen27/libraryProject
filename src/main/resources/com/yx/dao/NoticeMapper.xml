@@ -130,4 +130,14 @@
       createDate = #{createdate,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="queryNoticeAll" parameterType="com.yx.po.Notice" resultType="com.yx.po.Notice">
+    select * from notice
+    <where>
+      <if test="topic!=null and topic!=''">
+        and topic like '%${topic}%'
+      </if>
+    </where>
+    order by createDate desc
+  </select>
 </mapper>
