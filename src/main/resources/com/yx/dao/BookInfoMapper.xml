@@ -201,4 +201,38 @@
       status = #{status,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <resultMap id="queryBookAllMap" type="com.yx.po.BookInfo" extends="BaseResultMap">
+    <association property="typeInfo" javaType="com.yx.po.TypeInfo">
+      <id column="id" property="id"></id>
+      <result column="type_name" property="name"></result>
+    </association>
+  </resultMap>
+  <select id="queryBookInfoAll" parameterType="com.yx.po.BookInfo" resultMap="queryBookAllMap">
+    select book_info.*,type_info.name as type_name
+    from book_info,type_info
+    where type_info.id = book_info.type_id
+    <if test="name!=null">
+      and book_info.name like '%${name}%'
+    </if>
+    <if test="isbn!=null">
+      and book_info.isbn like '%${isbn}%'
+    </if>
+    <if test="typeId!=null">
+      and  book_info.type_id like '%${typeId}%'
+    </if>
+
+  </select>
+
+  <!--Obtenez des informations sur la quantité de livres en fonction du type de livre-->
+  <select id="getBookCountByType" resultType="com.yx.po.BookInfo">
+    SELECT
+      count( book.id ) AS counts,
+      type.NAME
+    FROM
+      book_info book
+        LEFT JOIN type_info type ON type.id = book.type_id
+    GROUP BY
+      book.type_id
+  </select>
 </mapper>
