@@ -12,16 +12,16 @@
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
         <!-- Générer une correspondance biunivoque entre les classes d'entités et les tables de base de données -->
-        <javaModelGenerator targetPackage="com.yx.po" targetProject="libraryProject\src\main\java">
+        <javaModelGenerator targetPackage="com.yx.po" targetProject="src\main\java">
             <property name="enableSubPackages" value="true"/>
             <!-- Les espaces avant et après les valeurs renvoyées par la base de données sont nettoyés -->
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
         <!--Mappage des fichiers XML et des interfaces dao-->
-        <sqlMapGenerator targetPackage="com.yx.dao" targetProject="libraryProject\src\main\resources">
+        <sqlMapGenerator targetPackage="com.yx.dao" targetProject="src\main\resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.yx.dao" targetProject="libraryProject\src\main\java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.yx.dao" targetProject="src\main\java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
