@@ -1,5 +1,5 @@
-# Library Management System
-
+# Système de gestion de bibliothèque
+*Read this in [English](README_en.md)*
 ## Technologies Utilisées
 - Base de données: MySQL
 - IDE: IDEA
