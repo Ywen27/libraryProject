@@ -1,6 +1,6 @@
-# libraryProject
+# Library Management System
 
-## Pile technologique
+## Technologies Utilisées
 - Base de données: MySQL
 - IDE: IDEA
 - Pool de connexions de données: Druid
