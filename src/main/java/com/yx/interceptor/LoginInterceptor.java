@@ -20,6 +20,13 @@ public class LoginInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        return true;
+        // Si on est connecté, on serait autorisé, sinon on serait intercepté.
+        HttpSession session=request.getSession();
+        if(session.getAttribute("user")!=null){
+            return true;
+        }else{
+            response.sendRedirect(request.getContextPath()+"/login");
+            return false;
+        }
     }
 }
