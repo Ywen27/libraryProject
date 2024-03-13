@@ -33,8 +33,8 @@ CREATE TABLE `admin`  (
 -- Records of admin
 -- ----------------------------
 INSERT INTO `admin` VALUES (1, 'admin', '12345', 1);
-INSERT INTO `admin` VALUES (2, 'yx5411', '12345', 0);
-INSERT INTO `admin` VALUES (4, 'xy1221', '12345', 0);
+INSERT INTO `admin` VALUES (2, 'admin1', '12345', 0);
+INSERT INTO `admin` VALUES (4, 'admin2', '12345', 0);
 
 -- ----------------------------
 -- Table structure for book_info
