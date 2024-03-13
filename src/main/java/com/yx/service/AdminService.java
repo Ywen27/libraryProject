@@ -32,7 +32,7 @@ public interface AdminService {
     void deleteAdminByIds(List<String> ids);
 
     /**
-     * Rechercher les informations d'utilisateur à l'aide de username et du mot de passe
+     * Rechercher les informations d'utilisateur à l'aide d'username et du mot de passe
      */
     Admin queryUserByNameAndPassword(String username,String password);
 }
