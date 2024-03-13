@@ -67,7 +67,7 @@ public class SimpleCharVerifyCodeGenImpl implements IVerifyCodeGen{
     }
 
     /**
-     * Génération de code de vérification
+     * Générer le code de vérification
      *
      * @param width
      * @param height
@@ -100,13 +100,14 @@ public class SimpleCharVerifyCodeGenImpl implements IVerifyCodeGen{
     private void createCharacter(Graphics graph, String randomStr) {
         char[] charArray = randomStr.toCharArray();
         for (int i = 0; i < charArray.length; i++) {
-            //设置RGB颜色算法参数
+            //Définir les paramètres de l'algorithme de couleur RGB
             graph.setColor(new Color(50 + RandomUtils.nextInt(100),
                     50 + RandomUtils.nextInt(100), 50 + RandomUtils.nextInt(100)));
-            //设置字体大小，类型
-            graph.setFont(new Font(FONT_TYPES[RandomUtils.nextInt(FONT_TYPES.length)], Font.BOLD, 26));
-            //设置x y 坐标
+            //Définir la taille et la police
+            graph.setFont(new Font(FONT_TYPES[RandomUtils.nextInt(FONT_TYPES.length)], Font.PLAIN, 26));
+            //Définir les coordonnées x y
             graph.drawString(String.valueOf(charArray[i]), 15 * i + 5, 19 + RandomUtils.nextInt(8));
         }
     }
 }
+
