@@ -1,14 +1,5 @@
 # Système de gestion de bibliothèque
 *Read this in [English](README_en.md)*
-## Technologies Utilisées
-- Base de données : MySQL
-- IDE : IDEA
-- Pool de connexions de données : Druid
-- Conteneur Web : Apache Tomcat
-- Outils de gestion de projet : Maven
-- Outils de contrôle de versions : Git
-- Technologie back-end : Spring + SpringMVC + MyBatis（SSM）
-- Framework front-end : bootstrap
 
 ## Description du projet :
 Ce système de gestion de bibliothèque est une application web conçue pour simplifier la gestion d'une bibliothèque. Il offre des fonctionnalités pour les administrateurs et les lecteurs (utilisateurs).
@@ -30,6 +21,17 @@ Ce système de gestion de bibliothèque est une application web conçue pour sim
 - Consultation des informations d'un livre : Les utilisateurs peuvent consulter les informations d'un livre, telles que le titre, l'auteur, le genre, et la disponibilité, etc.
 - Consulter les prêts personnels : Les utilisateurs peuvent regarder leur chronologie d'emprunt de livres.
 - Consulter les annonces.
+
+## Technologies Utilisées
+- Base de données : MySQL
+- IDE : IDEA
+- Pool de connexions de données : Druid
+- Conteneur Web : Apache Tomcat
+- Outils de gestion de projet : Maven
+- Outils de contrôle de versions : Git
+- Technologie back-end : Spring + SpringMVC + MyBatis（SSM）
+- Framework front-end : bootstrap
+
 
 
 
