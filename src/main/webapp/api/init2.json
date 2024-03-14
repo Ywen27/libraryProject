@@ -1,0 +1,46 @@
+{
+  "homeInfo": {
+    "title": "Main page",
+    "href": "welcome"
+  },
+  "logoInfo": {
+    "title": "Library",
+    "image": "images/logo.ico",
+    "href": ""
+  },
+  "menuInfo": [
+    {
+      "title": "Profile",
+      "icon": "bi-person-badge",
+      "href": "queryReaderInfoById",
+      "target": "_self"
+    },
+    {
+      "title": "Management",
+      "icon": "bi-list",
+      "href": "",
+      "target": "_self",
+      "child": [
+          {
+              "title": "Book",
+              "href": "bookIndexForReader",
+              "icon": "bi-book",
+              "target": "_self"
+          },
+          {
+              "title": "Announcement",
+              "href": "noticeIndexOfReader",
+              "icon": "bi-bell",
+              "target": "_self"
+          },
+          {
+            "title": "Lending",
+            "href": "queryLookBookList2",
+            "icon": "bi-arrow-left-right",
+            "target": "_self"
+          }
+      ]
+    }
+
+  ]
+}
