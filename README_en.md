@@ -1,5 +1,9 @@
 # Library Management System
 *Lisez ceci en [Français](README.md)*
+
+## Project Description:
+This library management system is a web application in Java with Maven designed to simplify the management of a library. It offers features for administrators and readers (users).
+
 ## Technologies Used
 - Database: MySQL
 - IDE: IDEA
