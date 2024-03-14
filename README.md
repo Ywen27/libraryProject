@@ -6,7 +6,7 @@ Ce système de gestion de bibliothèque est une application web en Java avec Mav
 
 ### Technologies Utilisées
 - Base de données : MySQL
-- IDE : IDEA
+- IDE : Intellij IDEA
 - Pool de connexions de données : Druid
 - Conteneur Web : Apache Tomcat
 - Outils de gestion de projet : Maven
