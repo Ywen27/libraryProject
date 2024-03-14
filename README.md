@@ -23,7 +23,7 @@ Ce système de gestion de bibliothèque est une application web conçue pour sim
 - Statistiques : L'administrateur peut consulter des statistiques sur les livres par type.
 - Il y a deux catégories d'administrateurs : Senior et Ordinaire. Les administrateurs seniors ont la capacité de gérer les administrateurs, tandis que les administrateurs ordinaires ne peuvent pas.
 
-### Fonctionnalités pour les utilisateurs
+### Fonctionnalités pour les lecteurs
 - Authentification : Les lecteurs doit se connecter à l'aide d'un nom d'utilisateur et d'un mot de passe.
 - Les utilisateurs peuvent modifier leurs informations personnelles ainsi que leur mot de passe.
 - Recherche de livres : Les utilisateurs peuvent rechercher des livres par titre, auteur, genre.
