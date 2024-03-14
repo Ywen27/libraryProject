@@ -25,8 +25,10 @@ Ce système de gestion de bibliothèque est une application web conçue pour sim
 
 # Fonctionnalités pour les utilisateurs
 
-Recherche de livres : Les utilisateurs peuvent rechercher des livres par titre, auteur, genre, etc.
-Consultation des informations d'un livre : Les utilisateurs peuvent consulter les informations d'un livre, telles que le titre, l'auteur, le genre, la date de publication, etc.
-Réservation d'un livre : Les utilisateurs peuvent réserver un livre qui n'est pas disponible.
-Prolongation d'un prêt : Les utilisateurs peuvent prolonger la durée d'un prêt en cours.
-Consultation de l'historique des prêts : Les utilisateurs peuvent consulter l'historique de leurs prêts.
+- Recherche de livres : Les utilisateurs peuvent rechercher des livres par titre, auteur, genre, etc.
+- Consultation des informations d'un livre : Les utilisateurs peuvent consulter les informations d'un livre, telles que le titre, l'auteur, le genre, la date de publication, etc.
+- Réservation d'un livre : Les utilisateurs peuvent réserver un livre qui n'est pas disponible.
+- Les utilisateurs peuvent modifier leurs informations personnelles ainsi qu leur mot de passe.
+- 
+
+
