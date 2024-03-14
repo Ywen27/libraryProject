@@ -13,7 +13,7 @@ Ce système de gestion de bibliothèque est une application web en Java avec Mav
 - Outils de contrôle de versions : Git
 - Technologie back-end : Spring + SpringMVC + MyBatis（SSM）
 - Framework front-end : bootstrap
-- 
+
 ### Fonctionnalités pour l'administrateur :
 - Authentification : L'administrateur doit se connecter à l'aide d'un nom d'utilisateur et d'un mot de passe.
 - Gestion des prêts : L'administrateur peut consulter la liste des prêts, faire un prêt pour le lecteur, modifier le statut d'un prêt(en cours de prêt, retourné, perdu, etc.), c'est-à-dire rendre un livre.
