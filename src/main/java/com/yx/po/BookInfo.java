@@ -1,5 +1,7 @@
 package com.yx.po;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -74,6 +76,7 @@ public class BookInfo implements Serializable {
      *
      * @mbggenerated Sun Mar 10 22:17:10 EDT 2024
      */
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date publishDate;
 
     /**
