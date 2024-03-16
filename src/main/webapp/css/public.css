@@ -141,3 +141,67 @@
     align-items: center;
     gap: 8px;
 }
+
+/*Chronologie des prêts*/
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    list-style: none;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 2px;
+    background: #e9ecef;
+}
+
+.timeline-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline-marker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #007bff;
+    border: 3px solid #ffffff;
+}
+
+.timeline-content {
+    padding-left: 60px;
+    padding-right: 20px;
+}
+
+.timeline-time {
+    margin-bottom: 5px;
+    font-size: 0.85em;
+    color: #6c757d;
+}
+
+.timeline-title {
+    margin-top: 0;
+    color: #495057;
+    font-weight: bold;
+}
+
+.timeline-body {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.timeline-body p {
+    margin-bottom: 0;
+}
+
+.timeline-body p + p {
+    margin-top: 5px;
+}
