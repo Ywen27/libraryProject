@@ -56,8 +56,8 @@ public class LendListServiceImpl implements LendListService {
         for(String id:ids){
             LendList lendList=new LendList();
             lendList.setId(Integer.parseInt(id));
-            lendList.setBackdate(new Date());
-            lendList.setBacktype(0);
+            lendList.setBackDate(new Date());
+            lendList.setBackType(0);
             lendListMapper.updateLendListSubmit(lendList);
         }
         for(String bid:bookIds){
@@ -71,13 +71,13 @@ public class LendListServiceImpl implements LendListService {
     public void backBook(LendList lendList) {
         LendList lend=new LendList();
         lend.setId(lendList.getId());
-        lend.setBacktype(lendList.getBacktype());
-        lend.setBackdate(new Date());
-        lend.setExceptremarks(lendList.getExceptremarks());
-        lend.setBookid(lendList.getBookid());
+        lend.setBackType(lendList.getBackType());
+        lend.setBackDate(new Date());
+        lend.setExceptRemarks(lendList.getExceptRemarks());
+        lend.setBookId(lendList.getBookId());
         lendListMapper.updateLendListSubmit(lend);
-        if(lend.getBacktype()==0 || lend.getBacktype()==1){
-            BookInfo bookInfo=bookInfoMapper.selectByPrimaryKey(lend.getBookid());
+        if(lend.getBackType()==0 || lend.getBackType()==1){
+            BookInfo bookInfo=bookInfoMapper.selectByPrimaryKey(lend.getBookId());
             bookInfo.setStatus(0);
             bookInfoMapper.updateByPrimaryKey(bookInfo);
         }

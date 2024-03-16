@@ -80,7 +80,7 @@ public class LoginController {
         }else{
             // Si le code de vérification est correct, déterminer le nom d'utilisateur et le mot de passe.
             if(type.equals("1")){ // Administrateur
-                // Le nom d'utilisateur et le mot de passe sont-ils corrects?
+                // Le nom d'utilisateur et le mot de passe sont-ils corrects ?
                 Admin admin=adminService.queryUserByNameAndPassword(username,password);
                 if(admin==null){ // Cet utilisateur n'existe pas
                     model.addAttribute("msg","Wrong username or password");
@@ -88,7 +88,7 @@ public class LoginController {
                 }
                 session.setAttribute("user",admin);
                 session.setAttribute("type","admin");
-                session.setAttribute("adminType", admin.getAdmintype());
+                session.setAttribute("adminType", admin.getAdminType());
                 session.setAttribute("username", admin.getUsername());
             }else{ // Lecteur
                 ReaderInfo readerInfo=readerService.queryUserInfoByNameAndPassword(username,password);
@@ -110,7 +110,7 @@ public class LoginController {
     @GetMapping("loginOut")
     public String loginOut(HttpServletRequest request){
         HttpSession session = request.getSession();
-        session.invalidate();//注销
+        session.invalidate();//Se déconnecter
         return "/login";
     }
 }

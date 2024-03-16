@@ -45,11 +45,11 @@ public class LendListController {
                                 @RequestParam(defaultValue = "1")Integer page,@RequestParam(defaultValue = "10")Integer limit){
 
         LendList info=new LendList();
-        info.setBacktype(type);
+        info.setBackType(type);
 
         //Créer un objet lecteur
         ReaderInfo reader=new ReaderInfo();
-        reader.setReadernumber(readerNumber);
+        reader.setReaderNumber(readerNumber);
         //Donnez les objets ci-dessus à info
         info.setReaderInfo(reader);
 
@@ -86,7 +86,7 @@ public class LendListController {
         List<String> list= Arrays.asList(ids.split(","));
         //Déterminer si le readerNumber existe
         ReaderInfo reader=new ReaderInfo();
-        reader.setReadernumber(readerNumber);
+        reader.setReaderNumber(readerNumber);
         PageInfo<ReaderInfo> pageInfo=readerService.queryAllReaderInfo(reader,1,1);
         if(pageInfo.getList().size()==0){
             return DataInfo.fail("Reader No. does not exist");
@@ -95,9 +95,9 @@ public class LendListController {
             //Livres disponibles
             for(String bid:list) {
                 LendList lendList = new LendList();
-                lendList.setReaderid(readerCard2.getId());//id de lecteur
-                lendList.setBookid(Integer.valueOf(bid));//id de livre
-                lendList.setLenddate(new Date());
+                lendList.setReaderId(readerCard2.getId());//id de lecteur
+                lendList.setBookId(Integer.valueOf(bid));//id de livre
+                lendList.setLendDate(new Date());
                 lendListService.addLendListSubmit(lendList);
                 //Changer le statut de livre
                 BookInfo info = bookInfoService.queryBookInfoById(Integer.valueOf(bid));
