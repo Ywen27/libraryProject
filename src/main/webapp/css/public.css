@@ -1,3 +1,23 @@
+.text-truncate2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 24px;
+    max-height: 60px;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+.modal-content.custom-modal-height {
+    height: 700px;
+}
+
+.required::after {
+    content: "*";
+    color: red;
+    margin-left: 4px;
+}
+
 /* Login Page*/
 .form-group-centered {
     display: flex;
