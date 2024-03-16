@@ -1,5 +1,8 @@
 package com.yx.po;
 
+import com.alibaba.fastjson.annotation.JSONField;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -42,6 +45,8 @@ public class Notice implements Serializable {
      *
      * @mbggenerated Sun Mar 10 22:17:10 EDT 2024
      */
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")//接收页面传来的时间格式
+    @JSONField(format="yyyy-MM-dd HH:mm:ss")//对返回的时间对象用fastjson格式化时间
     private Date createdate;
 
     /**
