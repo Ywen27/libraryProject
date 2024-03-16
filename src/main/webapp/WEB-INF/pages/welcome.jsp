@@ -27,7 +27,7 @@
                         <i class="bi bi-bell" style="font-size: 1.3rem; color: red;"></i>
                         <h5>${notice.topic}</h5>
                     </div>
-                    <p class="announcement-date"><fmt:formatDate value="${notice.createdate}" pattern="yyyy-MM-dd HH:mm:ss" /></p>
+                    <p class="announcement-date"><fmt:formatDate value="${notice.createDate}" pattern="yyyy-MM-dd HH:mm:ss" /></p>
                     <p class="announcement-content text-truncate">${notice.content}</p>
                 </div>
             </c:forEach>
