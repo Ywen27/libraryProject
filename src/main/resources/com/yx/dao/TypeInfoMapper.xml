@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.yx.dao.TypeInfoMapper" >
-  <!--Demandez tous types d'informations-->
+
   <select id="queryTypeInfoAll" resultType="com.yx.po.TypeInfo">
     select * from type_info
     <where>
@@ -11,22 +11,18 @@
     </where>
   </select>
 
-  <!--Ajout de type-->
   <insert id="addTypeSubmit">
-    insert into type_info (name,remarks)values(#{name},#{remarks})
-  </insert>
+        insert into type_info (name,remarks)values(#{name},#{remarks})
+    </insert>
 
-  <!--recherche de type par id-->
   <select id="queryTypeInfoById" resultType="com.yx.po.TypeInfo">
-    select * from type_info where id=#{id}
-  </select>
+        select * from type_info where id=#{id}
+    </select>
 
-  <!--modification de type-->
   <update id="updateTypeSubmit">
-    update type_info set name=#{name},remarks=#{remarks} where id=#{id}
-  </update>
+         update type_info set name=#{name},remarks=#{remarks} where id=#{id}
+    </update>
 
-  <!--suppression de type-->
   <delete id="deleteTypeByIds" parameterType="List">
     delete from type_info where id in
     <foreach collection="list" item="id" open="(" separator="," close=")">
