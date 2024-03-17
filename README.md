@@ -5,13 +5,13 @@
 Ce système de gestion de bibliothèque est une application web en Java avec Maven conçue pour simplifier la gestion d'une bibliothèque. Il offre des fonctionnalités pour les administrateurs et les lecteurs (utilisateurs).
 
 ### Technologies Utilisées
-- Base de données : MySQL
+- Base de données : [MySQL](library.sql)
 - IDE : Intellij IDEA
 - Pool de connexions de données : Druid
 - Conteneur Web : Apache Tomcat
-- Outils de gestion de projet : Maven
+- Outils de gestion de projet : [Maven](pom.xml)
 - Outils de contrôle de versions : Git
-- Technologie back-end : Spring + SpringMVC + MyBatis（SSM）
+- Technologie back-end : [Spring](src/main/resources/spring.xml) + [SpringMVC](src/main/resources/springmvc.xml) + [MyBatis](src/main/resources/generatorConfig.xml)
 - Framework front-end : bootstrap
 
 ### Fonctionnalités pour l'administrateur :
