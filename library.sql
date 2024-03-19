@@ -107,10 +107,10 @@ CREATE TABLE `notice`  (
 -- ----------------------------
 INSERT INTO `notice` VALUES (1, 'Announcement Internal Test 1', 'This is the first content test', 'admin', '2021-04-01 21:35:53');
 INSERT INTO `notice` VALUES (2, 'Announcement Internal Test 2', 'This is the second content test', 'admin', '2021-04-02 22:38:03');
-INSERT INTO `notice` VALUES (3, 'Announcement Internal Test 3', 'This is the third content test', 'yx5411', '2021-04-03 06:47:54');
-INSERT INTO `notice` VALUES (4, 'Announcement Internal Test 4', 'This is the fourth content test', 'yx5411', '2021-04-04 06:48:01');
-INSERT INTO `notice` VALUES (5, 'Announcement Internal Test 5', 'This is the fifth content test', 'xy1221', '2021-04-04 06:49:03');
-INSERT INTO `notice` VALUES (6, 'Announcement Internal Test 6', 'This is the sixth content test', 'yx5411', '2021-04-05 07:48:04');
+INSERT INTO `notice` VALUES (3, 'Announcement Internal Test 3', 'This is the third content test', 'admin1', '2021-04-03 06:47:54');
+INSERT INTO `notice` VALUES (4, 'Announcement Internal Test 4', 'This is the fourth content test', 'admin1', '2021-04-04 06:48:01');
+INSERT INTO `notice` VALUES (5, 'Announcement Internal Test 5', 'This is the fifth content test', 'admin2', '2021-04-04 06:49:03');
+INSERT INTO `notice` VALUES (6, 'Announcement Internal Test 6', 'This is the sixth content test', 'admin1', '2021-04-05 07:48:04');
 
 -- ----------------------------
 -- Table structure for reader_info
