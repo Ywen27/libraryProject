@@ -9,10 +9,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.xml.crypto.Data;
+import javax.servlet.http.HttpSession;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class NoticeController {
@@ -21,14 +24,14 @@ public class NoticeController {
     private NoticeService noticeService;
 
     /**
-     *  后台公告
+     *  Notice for admin
      */
     @GetMapping("/noticeIndexOfBack")
     public String noticeIndexOfBack(){
         return "notice/noticeIndexOfBack";
     }
     /**
-     *  后台公告
+     *  Notice for reader
      */
     @GetMapping("/noticeIndexOfReader")
     public String noticeIndexOfReader(){
@@ -36,16 +39,16 @@ public class NoticeController {
     }
 
     /**
-     * 查询所有公告信息
+     * Rechercher toutes les informations sur l'annonce
      */
     @RequestMapping("/noticeAll")
     @ResponseBody
-    public DataInfo noticeAll(Notice notice,@RequestParam(defaultValue = "1") Integer pageNum, @RequestParam(defaultValue = "15")Integer limit){
+    public DataInfo noticeAll(Notice notice,@RequestParam(defaultValue = "1") Integer pageNum, @RequestParam(defaultValue = "10")Integer limit){
         PageInfo<Notice> pageInfo = noticeService.queryAllNotice(notice, pageNum, limit);
-        return DataInfo.ok("成功",pageInfo.getTotal(),pageInfo.getList());
+        return DataInfo.ok("Success",pageInfo.getTotal(),pageInfo.getList());
     }
     /**
-     * 添加
+     * Ajouter une annonce
      */
     @GetMapping("/noticeAdd")
     public String noticeAdd(){
@@ -53,20 +56,21 @@ public class NoticeController {
     }
 
     /**
-     * 添加提交
+     * Soumettre l'ajout
      */
     @RequestMapping("/addNoticeSubmit")
     @ResponseBody
-    public DataInfo addNoticeSubmit(Notice notice){
-        //主题和内容可以页面获取，作者和时间在后台自动获取
-        notice.setAuthor("admin");//这里先暂且写admin
+    public DataInfo addNoticeSubmit(HttpServletRequest request, Notice notice){
+        HttpSession session = request.getSession();
+        String username = (String) session.getAttribute("username");
+        notice.setAuthor(username);
         notice.setCreateDate(new Date());
         noticeService.addNotice(notice);
         return DataInfo.ok();
     }
 
     /**
-     * 查看详情（修改）
+     * Afficher les détails
      */
     @GetMapping("/queryNoticeById")
     public String queryNoticeById(Integer id, Model model){
@@ -76,7 +80,7 @@ public class NoticeController {
     }
 
     /**
-     * 删除公告
+     * Supprimer l'annonce
      */
     @RequestMapping("/deleteNoticeByIds")
     @ResponseBody
