@@ -48,7 +48,7 @@ public class BookInfoController {
     @ResponseBody       // @ResponseBody convertit l'objet Java en données au format json, indiquant que le résultat de
                         // retour de cette méthode est directement écrit dans le corps de la réponse HTTP. Il est
                         // généralement utilisé lorsqu'un ajax asynchrone obtient des données.
-    public DataInfo bookAll(BookInfo bookInfo, @RequestParam(defaultValue = "1") Integer pageNum, @RequestParam(defaultValue = "15") Integer limit){
+    public DataInfo bookAll(BookInfo bookInfo, @RequestParam(defaultValue = "1") Integer pageNum, @RequestParam(defaultValue = "10") Integer limit){
         PageInfo<BookInfo> pageInfo = bookInfoService.queryBookInfoAll(bookInfo,pageNum,limit);
         return DataInfo.ok("Success",pageInfo.getTotal(),pageInfo.getList());//Le nombre total d'éléments est getTotal,
         // et les données sont encapsulées dans une liste pour le chargement et l'affichage de la pagination.
