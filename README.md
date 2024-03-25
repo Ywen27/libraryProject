@@ -42,6 +42,13 @@ Ce système de gestion de bibliothèque est une application web en Java avec Mav
 - #### Page de livre d'un lecteur
 ![Page de livre d'un lecteur](src/main/webapp/images/bookPageReader.png)
 
+### 📖 Guide de Configuration
+Pour faciliter la mise en place et l'utilisation de notre système, nous avons préparé un guide de configuration détaillé. Ce guide fournit des instructions pas à pas sur la manière de configurer l'environnement de développement, d'installer les dépendances nécessaires, et de configurer la base de données.
+
+Vous pouvez accéder au guide de configuration en cliquant sur le lien ci-dessous :
+
+🔧 [Guide de Configuration du Projet](configuration.pdf)
+
 
 
 
