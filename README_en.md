@@ -23,12 +23,6 @@ This library management system is a web application in Java with Maven designed 
 - 📢 Announcement management: The administrator can make an announcement if desired.
 - 📊 Statistics: The administrator can view statistics on books by type.
 - 👑 There are two categories of administrators: Senior and Ordinary. Senior administrators have the ability to manage administrators, while ordinary administrators cannot.
-- #### Login Page
-![Login Page](src/main/webapp/images/loginPage.png)
-- #### Home Page
-![Home Page](src/main/webapp/images/homePage.png)
-- #### Lending Management Page
-![Lending Management Page](src/main/webapp/images/LendManagePage.png)
 
 ### 👨‍🎓 Features for the readers
 - 🔐 Authentication: Readers must log in using a username and password.
@@ -37,10 +31,6 @@ This library management system is a web application in Java with Maven designed 
 - 📘 Viewing a book's information: Users can view the information of a book, such as the title, author, genre, and availability, etc.
 - 📆 View personal loans: Users can look at their book borrowing timeline.
 - 📢 View announcements.
-- #### Reader Profile Page
-![Reader Profile Page](src/main/webapp/images/profileReader.png)
-- #### Reader's Book Page
-![Reader's Book Page](src/main/webapp/images/bookPageReader.png)
 
 ### 📖 Configuration Guide
 To facilitate the setup and use of our system, we have prepared a detailed configuration guide. This guide provides step-by-step instructions on how to set up the development environment, install the necessary dependencies, and configure the database.
@@ -61,3 +51,15 @@ With this account, you will have access to all the administrative features, such
 - **Password**: `12345`
 
 As a reader, this account allows you to search for books, view information about the books, and see your loan history.
+
+### 📸 Some project screenshots
+- #### Login Page
+![Login Page](src/main/webapp/images/loginPage.png)
+- #### Home Page
+![Home Page](src/main/webapp/images/homePage.png)
+- #### Lending Management Page
+![Lending Management Page](src/main/webapp/images/LendManagePage.png)
+- #### Reader Profile Page
+![Reader Profile Page](src/main/webapp/images/profileReader.png)
+- #### Reader's Book Page
+![Reader's Book Page](src/main/webapp/images/bookPageReader.png)

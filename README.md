@@ -23,12 +23,6 @@ Ce système de gestion de bibliothèque est une application web en Java avec Mav
 - 📢 Gestion des annonces : L'administrateur peut faire une annonce si souhaitée.
 - 📊 Statistiques : L'administrateur peut consulter des statistiques sur les livres par type.
 - 👑 Il y a deux catégories d'administrateurs : Senior et Ordinaire. Les administrateurs seniors ont la capacité de gérer les administrateurs, tandis que les administrateurs ordinaires ne peuvent pas.
-- #### Page de connexion
-![Page de connexion](src/main/webapp/images/loginPage.png)
-- #### Page d'accueil
-![Page d'accueil](src/main/webapp/images/homePage.png)
-- #### Page de gestion des prêts
-![Page de gestion des prêts](src/main/webapp/images/LendManagePage.png)
 
 ### ‍🎓 Fonctionnalités pour les lecteurs
 - 🔐 Authentification : Les lecteurs doit se connecter à l'aide d'un nom d'utilisateur et d'un mot de passe.
@@ -37,10 +31,6 @@ Ce système de gestion de bibliothèque est une application web en Java avec Mav
 - 📘 Consultation des informations d'un livre : Les utilisateurs peuvent consulter les informations d'un livre, telles que le titre, l'auteur, le genre, et la disponibilité, etc.
 - 📆 Consulter les prêts personnels : Les utilisateurs peuvent regarder leur chronologie d'emprunt de livres.
 - 📢 Consulter les annonces.
-- #### Page de profil d'un lecteur
-![Page de profil d'un lecteur](src/main/webapp/images/profileReader.png)
-- #### Page de livre d'un lecteur
-![Page de livre d'un lecteur](src/main/webapp/images/bookPageReader.png)
 
 ### 📖 Guide de Configuration
 Pour faciliter la mise en place et l'utilisation de notre système, nous avons préparé un guide de configuration détaillé. Ce guide fournit des instructions pas à pas sur la manière de configurer l'environnement de développement, d'installer les dépendances nécessaires, et de configurer la base de données.
@@ -62,6 +52,17 @@ Avec ce compte, vous aurez accès à toutes les fonctionnalités d'administratio
 
 En tant que lecteur, ce compte vous permet de rechercher des livres, consulter des informations sur les livres, et voir votre historique de prêts.
 
+### 📸 Quelques captures d'écran de projet
+- #### Page de connexion
+![Page de connexion](src/main/webapp/images/loginPage.png)
+- #### Page d'accueil
+![Page d'accueil](src/main/webapp/images/homePage.png)
+- #### Page de gestion des prêts
+![Page de gestion des prêts](src/main/webapp/images/LendManagePage.png)
+- #### Page de profil d'un lecteur
+![Page de profil d'un lecteur](src/main/webapp/images/profileReader.png)
+- #### Page de livre d'un lecteur
+![Page de livre d'un lecteur](src/main/webapp/images/bookPageReader.png)
 
 
 
