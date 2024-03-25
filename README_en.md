@@ -41,3 +41,23 @@ This library management system is a web application in Java with Maven designed 
 ![Reader Profile Page](src/main/webapp/images/profileReader.png)
 - #### Reader's Book Page
 ![Reader's Book Page](src/main/webapp/images/bookPageReader.png)
+
+### 📖 Configuration Guide
+To facilitate the setup and use of our system, we have prepared a detailed configuration guide. This guide provides step-by-step instructions on how to set up the development environment, install the necessary dependencies, and configure the database.
+
+You can access the configuration guide by clicking the link below:
+
+🔧 [Project Configuration Guide](configuration.pdf)
+
+### 🚀 Test the Project
+To enable you to easily test our library management system, we have set up two example accounts: an administrator account and a reader account. Here are the login details for each account:
+#### Administrator Account
+- **Username**: `admin`
+- **Password**: `12345`
+
+With this account, you will have access to all the administrative features, such as managing books, loans, announcements, and users.
+#### Reader Account
+- **Username**: `john`
+- **Password**: `12345`
+
+As a reader, this account allows you to search for books, view information about the books, and see your loan history.

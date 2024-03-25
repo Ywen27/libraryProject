@@ -49,6 +49,18 @@ Vous pouvez accéder au guide de configuration en cliquant sur le lien ci-dessou
 
 🔧 [Guide de Configuration du Projet](configuration.pdf)
 
+### 🚀 Tester le projet
+Pour vous permettre de tester facilement notre système de gestion de bibliothèque, nous avons mis en place deux comptes d'exemple : un compte administrateur et un compte lecteur. Voici les détails de connexion pour chaque compte :
+#### Compte Administrateur
+- **Nom d'utilisateur** : `admin`
+- **Mot de passe** : `12345`
+
+Avec ce compte, vous aurez accès à toutes les fonctionnalités d'administration, telles que la gestion des livres, des prêts, des annonces, et des utilisateurs.
+#### Compte Lecteur
+- **Nom d'utilisateur** : `john`
+- **Mot de passe** : `12345`
+
+En tant que lecteur, ce compte vous permet de rechercher des livres, consulter des informations sur les livres, et voir votre historique de prêts.
 
 
 
