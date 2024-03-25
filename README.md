@@ -63,6 +63,10 @@ En tant que lecteur, ce compte vous permet de rechercher des livres, consulter d
 - #### Page de livre d'un lecteur
 ![Page de livre d'un lecteur](src/main/webapp/images/bookPageReader.png)
 
+## ⚖️ Licence 
+Ce projet est distribué sous la [Licence Publique Générale GNU version 3 (GPLv3)](LICENSE).
+
+Pour plus de détails, veuillez consulter le fichier [LICENSE](LICENSE) à la racine de ce projet.
 
 
 

@@ -61,3 +61,8 @@ As a reader, this account allows you to search for books, view information about
 ![Reader Profile Page](src/main/webapp/images/profileReader.png)
 - #### Reader's Book Page
 ![Reader's Book Page](src/main/webapp/images/bookPageReader.png)
+
+## ⚖️ License
+This project is distributed under the [GNU General Public License version 3 (GPLv3)](LICENSE).
+
+For more details, please see the [LICENSE](LICENSE) file at the root of this project.
