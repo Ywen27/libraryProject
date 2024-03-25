@@ -28,7 +28,7 @@ Ce système de gestion de bibliothèque est une application web en Java avec Mav
 #### Page d'accueil
 ![Page d'accueil](src/main/webapp/images/homePage.png)
 #### Page de gestion des prêts
-![Page d'accueil](src/main/webapp/images/LendManagePage.png)
+![Page de gestion des prêts](src/main/webapp/images/LendManagePage.png)
 
 ### ‍🎓 Fonctionnalités pour les lecteurs
 - 🔐 Authentification : Les lecteurs doit se connecter à l'aide d'un nom d'utilisateur et d'un mot de passe.
@@ -37,7 +37,10 @@ Ce système de gestion de bibliothèque est une application web en Java avec Mav
 - 📘 Consultation des informations d'un livre : Les utilisateurs peuvent consulter les informations d'un livre, telles que le titre, l'auteur, le genre, et la disponibilité, etc.
 - 📆 Consulter les prêts personnels : Les utilisateurs peuvent regarder leur chronologie d'emprunt de livres.
 - 📢 Consulter les annonces.
-
+#### Page de profil d'un lecteur
+![Page de profil d'un lecteur](src/main/webapp/images/profileReader.png)
+#### Page de livre d'un lecteur
+![Page de livre d'un lecteur](src/main/webapp/images/bookPageReader.png)
 
 
 
