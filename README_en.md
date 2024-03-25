@@ -57,6 +57,8 @@ As a reader, this account allows you to search for books, view information about
 ![Home Page](src/main/webapp/images/homePage.png)
 - #### Lending Management Page
 ![Lending Management Page](src/main/webapp/images/LendManagePage.png)
+- #### Lending Timeline
+![Lending Timeline](src/main/webapp/images/lendingTimeline.png)
 - #### Reader Profile Page
 ![Reader Profile Page](src/main/webapp/images/profileReader.png)
 - #### Reader's Book Page

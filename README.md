@@ -58,6 +58,8 @@ En tant que lecteur, ce compte vous permet de rechercher des livres, consulter d
 ![Page d'accueil](src/main/webapp/images/homePage.png)
 - #### Page de gestion des prêts
 ![Page de gestion des prêts](src/main/webapp/images/LendManagePage.png)
+- #### Chronologie du prêt
+![Chronologie du prêt](src/main/webapp/images/lendingTimeline.png)
 - #### Page de profil d'un lecteur
 ![Page de profil d'un lecteur](src/main/webapp/images/profileReader.png)
 - #### Page de livre d'un lecteur
