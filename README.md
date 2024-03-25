@@ -23,11 +23,11 @@ Ce système de gestion de bibliothèque est une application web en Java avec Mav
 - 📢 Gestion des annonces : L'administrateur peut faire une annonce si souhaitée.
 - 📊 Statistiques : L'administrateur peut consulter des statistiques sur les livres par type.
 - 👑 Il y a deux catégories d'administrateurs : Senior et Ordinaire. Les administrateurs seniors ont la capacité de gérer les administrateurs, tandis que les administrateurs ordinaires ne peuvent pas.
-#### Page de connexion
+- #### Page de connexion
 ![Page de connexion](src/main/webapp/images/loginPage.png)
-#### Page d'accueil
+- #### Page d'accueil
 ![Page d'accueil](src/main/webapp/images/homePage.png)
-#### Page de gestion des prêts
+- #### Page de gestion des prêts
 ![Page de gestion des prêts](src/main/webapp/images/LendManagePage.png)
 
 ### ‍🎓 Fonctionnalités pour les lecteurs
@@ -37,9 +37,9 @@ Ce système de gestion de bibliothèque est une application web en Java avec Mav
 - 📘 Consultation des informations d'un livre : Les utilisateurs peuvent consulter les informations d'un livre, telles que le titre, l'auteur, le genre, et la disponibilité, etc.
 - 📆 Consulter les prêts personnels : Les utilisateurs peuvent regarder leur chronologie d'emprunt de livres.
 - 📢 Consulter les annonces.
-#### Page de profil d'un lecteur
+- #### Page de profil d'un lecteur
 ![Page de profil d'un lecteur](src/main/webapp/images/profileReader.png)
-#### Page de livre d'un lecteur
+- #### Page de livre d'un lecteur
 ![Page de livre d'un lecteur](src/main/webapp/images/bookPageReader.png)
 
 
