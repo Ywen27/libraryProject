@@ -35,18 +35,17 @@ Ce système de gestion de bibliothèque est une application web en Java avec Mav
 ### 📖 Guide de Configuration
 Pour faciliter la mise en place et l'utilisation de notre système, nous avons préparé un guide de configuration détaillé. Ce guide fournit des instructions pas à pas sur la manière de configurer l'environnement de développement, d'installer les dépendances nécessaires, et de configurer la base de données.
 
-Vous pouvez accéder au guide de configuration en cliquant sur le lien ci-dessous :
+- Vous pouvez accéder au guide de configuration en cliquant sur le lien 🔧 [Guide de Configuration du Projet](configuration.pdf)
 
-🔧 [Guide de Configuration du Projet](configuration.pdf)
 
 ### 🚀 Tester le projet
 Pour vous permettre de tester facilement notre système de gestion de bibliothèque, nous avons mis en place deux comptes d'exemple : un compte administrateur et un compte lecteur. Voici les détails de connexion pour chaque compte :
-#### Compte Administrateur
+##### Compte Administrateur
 - **Nom d'utilisateur** : `admin`
 - **Mot de passe** : `12345`
 
 Avec ce compte, vous aurez accès à toutes les fonctionnalités d'administration, telles que la gestion des livres, des prêts, des annonces, et des utilisateurs.
-#### Compte Lecteur
+##### Compte Lecteur
 - **Nom d'utilisateur** : `john`
 - **Mot de passe** : `12345`
 
