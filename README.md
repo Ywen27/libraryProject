@@ -8,7 +8,7 @@ Ce système de gestion de bibliothèque est une application web en Java avec Mav
 - Base de données : [MySQL](library.sql)
 - IDE : Intellij IDEA
 - Pool de connexions de données : Druid
-- Conteneur Web : Apache Tomcat
+- Conteneur Web : [Apache Tomcat](https://tomcat.apache.org/)
 - Outils de gestion de projet : [Maven](pom.xml)
 - Outils de contrôle de versions : Git
 - Technologie back-end : [Spring](src/main/resources/spring.xml) + [SpringMVC](src/main/resources/springmvc.xml) + [MyBatis](src/main/resources/generatorConfig.xml)
