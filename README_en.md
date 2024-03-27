@@ -7,12 +7,12 @@ This library management system is a web application in Java with Maven designed 
 ## 🛠️ Technologies Used
 - Database: [MySQL](library.sql)
 - IDE: Intellij IDEA
-- Data connection pool: Druid
-- Web container: Apache Tomcat
+- Data connection pool: [Druid](https://github.com/alibaba/druid/wiki/FAQ)
+- Web container: [Apache Tomcat](https://tomcat.apache.org/)
 - Project management tools: [Maven](pom.xml)
 - Version control tools: Git
 - Back-end technology: [Spring](src/main/resources/spring.xml) + [SpringMVC](src/main/resources/springmvc.xml) + [MyBatis](src/main/resources/generatorConfig.xml)
-- Front-end framework：bootstrap
+- Front-end framework：[bootstrap](https://getbootstrap.com/)
 
 ### 💼 Features for the administrator:
 - 🔐 Authentication: The administrator must log in using a username and password.
