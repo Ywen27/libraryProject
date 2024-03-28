@@ -58,7 +58,7 @@ public class ReaderInfoController {
     @RequestMapping("/addReaderSubmit")
     @ResponseBody
     public DataInfo addReaderSubmit(@RequestBody ReaderInfo readerInfo){
-        readerInfo.setPassword("123456");//设置默认密码
+        readerInfo.setPassword("123456");// Le mot de passe par défaut
         readerInfo.setRegisterDate(new Date()); // Set the current date and time as the register date
         readerInfoService.addReaderInfoSubmit(readerInfo);
         return DataInfo.ok();
