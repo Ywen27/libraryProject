@@ -40,6 +40,7 @@
                 <!-- Table rows will be added here -->
                 </tbody>
             </table>
+            <div id="noDataMessage" class="alert alert-warning text-center" style="display:none;">No corresponding data</div>
             <nav aria-label="Page navigation">
                 <ul class="pagination justify-content-center">
                     <li class="page-item" id="previousPage"><a class="page-link" href="#">Previous</a></li>
@@ -91,19 +92,25 @@
             data: filters,
             success: function(response) {
                 $('#announcementTable tbody').empty();
-                response.data.forEach(function(item) {
-                    var row = '<tr>' +
-                        '<td>' + item.topic + '</td>' +
-                        '<td class="text-truncate2">' + item.content + '</td>' +
-                        '<td>' + item.author + '</td>' +
-                        '<td>' + item.createDate + '</td>' +
-                        '<td>' +
-                        '<button class="btn btn-sm btn-info detailButton" ' +
-                        'data-id="' + item.id + '">Detail</button> ' +
-                        '</td>' +
-                        '</tr>';
-                    $('#announcementTable tbody').append(row);
-                });
+                if (response.data.length === 0) {
+                    $('#noDataMessage').show();
+                } else {
+                    $('#noDataMessage').hide();
+                    response.data.forEach(function(item) {
+                        var row = '<tr>' +
+                            '<td>' + item.topic + '</td>' +
+                            '<td class="text-truncate2">' + item.content + '</td>' +
+                            '<td>' + item.author + '</td>' +
+                            '<td>' + item.createDate + '</td>' +
+                            '<td>' +
+                            '<button class="btn btn-sm btn-info detailButton" ' +
+                            'data-id="' + item.id + '">Detail</button> ' +
+                            '</td>' +
+                            '</tr>';
+                        $('#announcementTable tbody').append(row);
+                    });
+                }
+
             },
             error: function(xhr, status, error) {
                 console.error("Failed to load announcements:", error);
@@ -130,6 +137,13 @@
         var currentPage = 1;
         var itemsPerPage = 10;
         loadNoticesData(currentPage, itemsPerPage);
+        $('#topic').on('input', function() {
+            var allFieldsEmpty = $('#topic').val().trim() === '';
+
+            if(allFieldsEmpty) {
+                loadNoticesData(currentPage, itemsPerPage);
+            }
+        });
 
         $('.go-to-page-btn').on('click', function () {
             var pageNumber = $('.page-number-input').val();
@@ -176,7 +190,7 @@
             loadNoticesData(filters);
         });
 
-        $(document).on('click', '.detailButton', function() {
+        $(document).off('click', '.detailButton').on('click', '.detailButton', function() {
             var noticeId = $(this).data('id');
             openEditDialog(noticeId);
         });
