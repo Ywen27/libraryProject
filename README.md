@@ -52,6 +52,10 @@ Avec ce compte, vous aurez accès à toutes les fonctionnalités d'administratio
 
 En tant que lecteur, ce compte vous permet de rechercher des livres, consulter des informations sur les livres, et voir votre historique de prêts.
 
+### ⚙️ Sécurité des Mots de Passe
+
+Dans le cadre de ce projet d’exercice, et pour en simplifier les aspects techniques, nous n’avons pas implémenté le cryptage des mots de passe côté back-end. Il est important de noter que dans un environnement de production réel, il serait impératif de stocker les mots de passe sous une forme sécurisée en utilisant des méthodes de hachage et de salage appropriées. Ce choix est dicté par la volonté de se concentrer sur les autres aspects de la gestion de la bibliothèque dans le cadre d'apprentissage de ce projet. Pour plus d’informations sur la mise en œuvre d’un hachage et salage de mots de passe sécurisé en Java, vous pouvez consulter [ce guide complet](https://howtodoinjava.com/java/java-security/how-to-generate-secure-password-hash-md5-sha-pbkdf2-bcrypt-examples/).
+
 ### 📸 Quelques captures d'écran de projet
 - #### Page de connexion
 ![Page de connexion](src/main/webapp/images/loginPage.png)

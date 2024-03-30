@@ -51,6 +51,9 @@ With this account, you will have access to all the administrative features, such
 
 As a reader, this account allows you to search for books, view information about the books, and see your loan history.
 
+### ⚙️ Password Security
+For this exercise project, to simplify the technical aspects, we have not implemented password encryption on the back-end. It is important to note that in a real production environment, it would be imperative to store passwords in a secure form using appropriate hashing and salting methods. This choice is dictated by the desire to focus on the other aspects of library management as part of this project's learning experience. For more information on how to implement secure password hashing and salting in Java, you can refer to [this comprehensive guide](https://howtodoinjava.com/java/java-security/how-to-generate-secure-password-hash-md5-sha-pbkdf2-bcrypt-examples/).
+
 ### 📸 Some project screenshots
 - #### Login Page
 ![Login Page](src/main/webapp/images/loginPage.png)
