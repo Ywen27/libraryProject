@@ -15,7 +15,7 @@ Ce système de gestion de bibliothèque est une application web en Java avec Mav
 - Framework front-end : [bootstrap](https://getbootstrap.com/)
 
 ### 💼 Fonctionnalités pour l'administrateur :
-- 🔐 Authentification : L'administrateur doit se connecter à l'aide d'un nom d'utilisateur et d'un mot de passe.
+- 🔐 Authentification : L'administrateur doit se connecter à l'aide d'un nom d'utilisateur, d'un mot de passe et d'un code de vérification.
 - 📋 Gestion des prêts : L'administrateur peut consulter la liste des prêts, faire un prêt pour le lecteur, modifier le statut d'un prêt(en cours de prêt, retourné, perdu, etc.), c'est-à-dire rendre un livre.
 - 📚 Gestion des livres : L'administrateur peut consulter la liste des livres, ajouter de nouveaux livres, modifier les informations des livres existants et supprimer des livres.
 - 👥 Gestion des utilisateurs : L'administrateur peut consulter la liste des utilisateurs, modifier leurs informations et supprimer des utilisateurs.
@@ -25,12 +25,13 @@ Ce système de gestion de bibliothèque est une application web en Java avec Mav
 - 👑 Il y a deux catégories d'administrateurs : Senior et Ordinaire. Les administrateurs seniors ont la capacité de gérer les administrateurs, tandis que les administrateurs ordinaires ne peuvent pas.
 
 ### ‍🎓 Fonctionnalités pour les lecteurs
-- 🔐 Authentification : Les lecteurs doit se connecter à l'aide d'un nom d'utilisateur et d'un mot de passe.
+- 🔐 Authentification : Les lecteurs doit se connecter à l'aide 'un nom d'utilisateur, d'un mot de passe et d'un code de vérification.
 - ✏️ Les utilisateurs peuvent modifier leurs informations personnelles ainsi que leur mot de passe.
 - 🔍 Recherche de livres : Les utilisateurs peuvent rechercher des livres par titre, auteur, genre.
 - 📘 Consultation des informations d'un livre : Les utilisateurs peuvent consulter les informations d'un livre, telles que le titre, l'auteur, le genre, et la disponibilité, etc.
 - 📆 Consulter les prêts personnels : Les utilisateurs peuvent regarder leur chronologie d'emprunt de livres.
 - 📢 Consulter les annonces.
+- 🔑 Chaque lecteur possède un mot de passe `123456` par défaut au début, ils peuvent le modifier eux-mêmes.
 
 ### 📖 Guide de Configuration
 Pour faciliter la mise en place et l'utilisation de notre système, nous avons préparé un guide de configuration détaillé. Ce guide fournit des instructions pas à pas sur la manière de configurer l'environnement de développement, d'installer les dépendances nécessaires, et de configurer la base de données.
