@@ -25,7 +25,7 @@ Ce système de gestion de bibliothèque est une application web en Java avec Mav
 - 👑 Il y a deux catégories d'administrateurs : Senior et Ordinaire. Les administrateurs seniors ont la capacité de gérer les administrateurs, tandis que les administrateurs ordinaires ne peuvent pas.
 
 ### ‍🎓 Fonctionnalités pour les lecteurs
-- 🔐 Authentification : Les lecteurs doit se connecter à l'aide 'un nom d'utilisateur, d'un mot de passe et d'un code de vérification.
+- 🔐 Authentification : Les lecteurs doit se connecter à l'aide d'un nom d'utilisateur, d'un mot de passe et d'un code de vérification.
 - ✏️ Les utilisateurs peuvent modifier leurs informations personnelles ainsi que leur mot de passe.
 - 🔍 Recherche de livres : Les utilisateurs peuvent rechercher des livres par titre, auteur, genre.
 - 📘 Consultation des informations d'un livre : Les utilisateurs peuvent consulter les informations d'un livre, telles que le titre, l'auteur, le genre, et la disponibilité, etc.
